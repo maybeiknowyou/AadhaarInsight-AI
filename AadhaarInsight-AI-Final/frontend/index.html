@@ -1,15 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>AadhaarInsight AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #1a4fa3;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    main {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    button {
+      background: #1a4fa3;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #163f82;
+    }
+    .output {
+      margin-top: 20px;
+      padding: 12px;
+      background: #eef2f7;
+      border-radius: 4px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
 
+<header>
   <h1>AadhaarInsight AI</h1>
+  <p>Analytics & Insights Platform (Hackathon Demo)</p>
+</header>
+
+<main>
+  <h2>System Verification</h2>
+  <p>
+    This demo verifies backend availability and AI analytics service
+    developed for UIDAI Aadhaar datasets (using dummy/sample data).
+  </p>
 
   <button id="checkBackend">Check Backend Status</button>
-  <p id="output"></p>
 
-  <script src="app.js"></script>
+  <div class="output" id="output">
+    Click the button to verify backend connectivity.
+  </div>
+</main>
+
+<footer>
+  UIDAI Hackathon Demo • No real Aadhaar data used
+</footer>
+
+<script src="app.js"></script>
 </body>
 </html>
