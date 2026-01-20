@@ -1,20 +1,14 @@
 const API_URL = "https://aadhaarinsight-ai.onrender.com";
 
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("checkBackend");
+document.getElementById("checkBackend").onclick = async () => {
   const output = document.getElementById("output");
+  output.innerText = "Checking...";
 
-  if (!btn) return;
-
-  btn.addEventListener("click", async () => {
-    output.innerText = "Checking backend...";
-
-    try {
-      const res = await fetch(API_URL);
-      const data = await res.json();
-      output.innerText = data.status;
-    } catch (err) {
-      output.innerText = "Backend not reachable";
-    }
-  });
-});
+  try {
+    const res = await fetch(API_URL);
+    const data = await res.json();
+    output.innerText = data.status;
+  } catch (e) {
+    output.innerText = "Backend not reachable";
+  }
+};
