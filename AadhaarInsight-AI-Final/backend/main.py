@@ -1,6 +1,18 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI()
 
-@app.get('/')
+# CORS FIX (VERY IMPORTANT)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.get("/")
 def root():
-    return {'status': 'AadhaarInsight AI backend running'}
+    return {"status": "AadhaarInsight AI backend running"}
+
